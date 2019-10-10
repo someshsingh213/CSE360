@@ -64,29 +64,4 @@ public class AddingMachine {
 		history = "0";
 	}
 	
-	/**
-	 * This is the main method. This is not required as
-	 * part of the assignment but I have included it for 
-	 * testing purposes.
-	 */
-	public static void main(String args[]) {
-		AddingMachine obj = new AddingMachine();
-		
-		obj.add(7);
-		obj.subtract(10);
-		obj.add(23);
-		obj.add(1);
-		System.out.println("Total = " + obj.getTotal()); //total
-		System.out.println("history = " + obj.toString()); //history
-		obj.clear();
-		System.out.println("Total = " + obj.getTotal()); //total
-		System.out.println("history = " + obj.toString()); //history
-		obj.add(7);
-		obj.subtract(10);
-		obj.add(23);
-		obj.add(1);
-		System.out.println("Total = " + obj.getTotal()); //total
-		System.out.println("history = " + obj.toString()); //history
-		
-	}
 }
