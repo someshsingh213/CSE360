@@ -3,8 +3,8 @@
 * @classId 85141
 * @Assignment No. 2
 * 
-* The AddingMachine.java file represents an adding machine which 
-* which when implemented fully adds, subtracts and gets total of the operands.
+* The AddingMachine.java file represents an adding machine  
+* which  adds, subtracts and gets total of the operands.
 * It also returns the history of the transactions(add, subtract) as applied 
 * to the operands using the toString method
 * 
@@ -67,7 +67,7 @@ public class AddingMachine {
 	/**
 	 * This is the main method. This is not required as
 	 * part of the assignment but I have included it for 
-	 * testing purposes. 
+	 * testing purposes.
 	 */
 	public static void main(String args[]) {
 		AddingMachine obj = new AddingMachine();
