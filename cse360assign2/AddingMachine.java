@@ -15,6 +15,7 @@ package cse360assign2;
 public class AddingMachine {
 
 	private int total;
+	private String history = "0"; // to store the history of the operations
 	
 	/**
 	 * This is a constructor of the AddingMachine.java class which 
@@ -28,21 +29,23 @@ public class AddingMachine {
 	 * This method returns the total
 	 */
 	public int getTotal () {
-		return 0;
+		return total; //returns the total
 	}
 	
 	/**
 	 * This method is responsible for the addition of the operands
 	 */
 	public void add (int value) {
-		
+		total = total + value; // adding value to the total
+		history = history + " + " + value;
 	}
 	
 	/**
 	 * This method performs the subtraction 
 	 */
 	public void subtract (int value) {
-		
+		total = total - value; //subtracting value from the total
+		history = history + " - " + value;
 	}
 	
 	/**
@@ -50,10 +53,40 @@ public class AddingMachine {
 	 * performed
 	 */
 	public String toString () {
-		return "";
+		return history;
 	}
-
+    
+	/**
+	 * This method is used to reset total and history
+	 */
 	public void clear() {
+		total = 0;
+		history = "0";
+	}
 	
+	/**
+	 * This is the main method. This is not required as
+	 * part of the assignment but I have included it for 
+	 * testing purposes. 
+	 */
+	public static void main(String args[]) {
+		AddingMachine obj = new AddingMachine();
+		
+		obj.add(7);
+		obj.subtract(10);
+		obj.add(23);
+		obj.add(1);
+		System.out.println("Total = " + obj.getTotal()); //total
+		System.out.println("history = " + obj.toString()); //history
+		obj.clear();
+		System.out.println("Total = " + obj.getTotal()); //total
+		System.out.println("history = " + obj.toString()); //history
+		obj.add(7);
+		obj.subtract(10);
+		obj.add(23);
+		obj.add(1);
+		System.out.println("Total = " + obj.getTotal()); //total
+		System.out.println("history = " + obj.toString()); //history
+		
 	}
 }
